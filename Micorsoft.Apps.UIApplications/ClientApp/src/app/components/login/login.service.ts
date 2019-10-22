@@ -6,10 +6,11 @@ import { HttpService } from '../../commonServices/http.service';
 
 export class LoginService {
 
+
   constructor(private httpService: HttpService) { }
 
-  public login(data: FormData): Observable<any> {
-    return this.httpService.makePostRequestforFormData('api/........');
+  public login(data: any): Observable<any> {
+    return this.httpService.makePostRequest('Login', data);
   }
 
   public logout() {

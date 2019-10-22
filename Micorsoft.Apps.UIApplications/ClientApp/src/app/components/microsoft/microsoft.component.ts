@@ -8,9 +8,12 @@ import { Router } from '@angular/router';
 })
 export class MicrosoftComponent implements OnInit {
 
+  public name: string;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.name = sessionStorage.getItem('Username');
   }
 
   back() {

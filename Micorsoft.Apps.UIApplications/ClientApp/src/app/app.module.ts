@@ -12,6 +12,9 @@ import { RoutesModule } from './routes/routes.module';
 import { LayoutComponent } from './components/layout/layout.component';
 import { MicrosoftComponent } from './components/microsoft/microsoft.component';
 
+import { LoginService } from './components/login/login.service';
+import { HttpService } from './commonServices/http.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,7 @@ import { MicrosoftComponent } from './components/microsoft/microsoft.component';
     ReactiveFormsModule,
     RoutesModule
   ],
-  providers: [],
+  providers: [LoginService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
