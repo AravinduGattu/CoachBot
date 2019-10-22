@@ -1,0 +1,48 @@
+<div class="Page">
+  <div class="mainHeader">
+    <div class="hiddenFlow">
+      <img class="imgBackground" src="../../../assets/Background4.jpg" />
+    </div>
+
+    <div class="header-strip">
+      <div>
+        <img alt="Microsoft" src="../../../assets/Microsoft-Logo4.png">
+      </div>
+      <div *ngIf="!isInternalLogin">
+        <button class="btnTop" color="info" block="true" (click)="internalSignIn()">Sign in</button>
+      </div>
+    </div>
+
+    <div *ngIf="isInternalLogin" class="empLogin">
+      <div>
+        <img alt="Microsoft" class="loginMSLogo" src="../../../assets/Microsoft-Logo5.png">
+      </div>
+      <div class="signIn" role="heading" aria-level="1" data-bind="text:title">
+        Sign in
+      </div>
+      <div *ngIf="!isValidCredentials" class="invalidCredentials">Your user name or password is incorrect, please provide valid credentials !!</div>
+      <form class="form-group loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-container">
+          <input required formControlName="username" type="text" id="formUserID" class="input-field" placeholder="User Name">
+        </div>
+        <div class="vailation-alert" *ngIf="(loginForm.controls['username'].touched || loginForm.controls['username'].dirty)">
+          <div *ngIf="loginForm.controls['username']?.errors?.required">User Name is required.</div>
+        </div>
+        <div class="input-container">
+          <input required formControlName="password" type="password" id="formPassword" class="input-field" placeholder="Password">
+        </div>
+        <div class="vailation-alert" *ngIf="(loginForm.controls['password'].touched || loginForm.controls['password'].dirty)">
+          <div *ngIf="loginForm.controls['password']?.errors?.required">Password is required.</div>
+        </div>
+        <br />
+        <div class="pull-right">
+          <button class="btn btnBack" color="info" block="true" type="button" (click)="back()">Back</button>
+          <button class="btn" color="info" block="true" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+        </div>
+      </form>
+    </div>
+    <div *ngIf="!isInternalLogin" class="chatBot">
+      <img class="" src="../../../assets/chatbot.png" />
+    </div>
+    </div>
+  </div>

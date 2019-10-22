@@ -259,3 +259,14 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Background3.png
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Background2.jpg
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Background1.jpg
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Microsoft-Logo3.png
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Microsoft-Logo2.png
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Microsoft-Logo1.png
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Microsoft-Logo.png
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/microsofFavicon.ico
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Windows10.jpg
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/Windows-10.png
+/Micorsoft.Apps.UIApplications/ClientApp/src/assets/robot-typing-background.png

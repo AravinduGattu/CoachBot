@@ -1,0 +1,190 @@
+.Page {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI';
+}
+
+.mainHeader {
+  position: fixed;
+  display: inline;
+  overflow: auto;
+}
+
+.mainHeader .header-strip {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.2);
+  height: 55px;
+  width: 100%;
+}
+
+/*.mainHeader .header-strip img {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  width: 150px;
+  height: 35px;
+}*/
+
+.mainHeader .header-strip img {
+  position: absolute;
+  left: 25px;
+  width: 140px;
+  height: 45px;
+}
+
+.mainHeader .header-strip button {
+  position: absolute;
+  right: 25px;
+}
+
+.hiddenFlow {
+  overflow-y: hidden;
+}
+
+.imgBackground {
+  width: 100%;
+}
+
+.empLogin {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  padding: 35px;
+  width: 400px;
+  background: white;
+  /*background: rgba(255,255,255,0.12);*/
+  text-align: left;
+}
+
+.chatBot {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+  width: 400px;
+  height: 400px;
+}
+
+.chatBot img {
+  width: 100%;
+  height: 100%;
+}
+
+.loginMSLogo {
+  width: 100px;
+  height: 24px;
+}
+
+.signIn {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Segoe UI';
+  margin: 15px 0px 5px 0px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3px;
+  margin-top: 20px;
+  height: 40px;
+  border-bottom: 1px solid darkgray;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI';
+  border: none;
+}
+
+.input-field:focus {
+  border-bottom: 1px solid lightblue;
+}
+
+.btn {
+  background-color: #0067b8;
+  height: 32px;
+  width: 100px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 3px 0px 3px 0px;
+  border-radius: 0px;
+  margin-left: 3px;
+}
+
+.btnBack {
+  background-color: lightgray;
+  color: black;
+}
+
+.btnTop {
+  background-color: white;
+  height: 32px;
+  width: 100px;
+  top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0078d4;
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 3px 0px 3px 0px;
+}
+
+.vailation-alert {
+  font-size: 11px;
+  color: red;
+}
+
+.invalidCredentials {
+  width: 100%;
+  height: 25px;
+  color: red;
+}
+
+/* Responsive */
+
+@media screen and (max-width:700px) {
+  /* For mobile phones: */
+
+  .mainHeader {
+    position: relative;
+    overflow: auto;
+  }
+
+  /*.mainHeader .header-strip {
+    position: absolute;
+  }*/
+
+  .empLogin {
+    position: static;
+    width: 90%;
+    border: 1px solid darkgray;
+    margin: 20px auto;
+  }
+
+  .chatBot {
+    /*position: static;
+    width: 90%;*/
+    display: none;
+  }
+
+  .input-field {
+    outline: none;
+    border: none;
+  }
+}
+
+/* Responsive */
