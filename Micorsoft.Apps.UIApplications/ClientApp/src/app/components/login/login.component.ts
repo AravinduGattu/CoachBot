@@ -61,9 +61,9 @@ export class LoginComponent implements OnInit {
         this.isValidCredentials = false;
       }
 
-    }), (error: any) => {
+    }, (error: any) => {
       this.isValidCredentials = false;
-    }
+    });
   }
 
   internalSignIn() {
