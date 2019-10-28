@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
 
     this.loginService.login(data).subscribe((response: any) => {
 
-      if (response && response.token) {
+      if (response && response.success) {
         this.loginService.setSessionStorage('token', response.token);
         this.loginService.setSessionStorage('Username', response.userName);
         this.router.navigate(['app/microsoft']);

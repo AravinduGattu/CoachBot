@@ -34,14 +34,14 @@ namespace Microsoft.Apps.CoreApplications.Controllers
         [HttpPost]
         public IActionResult Login([FromBody]User userLogin)
         {
-            IActionResult response = Unauthorized();
-           
+            IActionResult response = Ok(new { success = false, token = "", UserName = userLogin.Username });
+
             var user = login.AuthenticateUser(userLogin);
 
             if (user != null)
             {
                 var tokenString = login.GenerateJSONWebToken(user);
-                response = Ok(new { token = tokenString, UserName = userLogin.Username });
+                response = Ok(new { success = true, token = tokenString, UserName = userLogin.Username });
             }
 
             return response;
