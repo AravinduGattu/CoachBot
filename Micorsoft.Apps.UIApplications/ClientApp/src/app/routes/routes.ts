@@ -2,12 +2,14 @@ import { Routes, Route } from '@angular/router';
 import { LoginComponent } from '../components/login/login.component';
 import { LayoutComponent } from '../components/layout/layout.component';
 import { MicrosoftComponent } from '../components/microsoft/microsoft.component';
+import { ChatbotComponent } from '../components/chatbot/chatbot.component';
 import { RouteGuardService } from './route-guard.service';
 
 
 
 export const childRoutes: Routes = [
   { path: 'microsoft', component: MicrosoftComponent, canActivate: [RouteGuardService]},
+  { path: 'chatbot', component: ChatbotComponent, canActivate: [RouteGuardService]},
 ];
 
 

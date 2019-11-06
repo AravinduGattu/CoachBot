@@ -15,22 +15,28 @@ import { MicrosoftComponent } from './components/microsoft/microsoft.component';
 import { LoginService } from './components/login/login.service';
 import { HttpService } from './commonServices/http.service';
 
+import { NgxMicrosoftBotFrameworkModule } from 'ngx-microsoft-bot-framework';
+import { BotDirective, BotHelperDirective, StyleSetDirective, BotService, ComService } from 'ngx-microsoft-bot-framework';
+import { ChatbotComponent } from './components/chatbot/chatbot.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     LoginComponent,
     LayoutComponent,
-    MicrosoftComponent
+    MicrosoftComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RoutesModule
+    RoutesModule,
+    NgxMicrosoftBotFrameworkModule
   ],
-  providers: [LoginService, HttpService],
+  providers: [LoginService, HttpService, StyleSetDirective, BotService, ComService, BotDirective, BotHelperDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

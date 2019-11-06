@@ -1,12 +1,25 @@
 <div class="pageDiv">
-  <div class="welcome">
-    Welcome to Microsoft CSS Coach BOT
-  </div>
-  <img src="../../../assets/MS Logo.png" />
-  <div class="welcome">
-    {{name}}
-  </div>
+  <!--<div class="{{!enableChat ? 'col-lg-12 col-md-12' : 'col-lg-6 col-md-6'}}">-->
   <div>
-    <button class="btn" (click)="back()">Back</button>
+    <div class="welcome">
+      Welcome to Microsoft CSS Coach BOT
+    </div>
+    <img src="../../../assets/MS Logo.png" />
+    <div class="welcome">
+      {{name}}
+    </div>
+    <div>
+      <button class="btn" (click)="back()">Back</button>
+      <button class="btn" (click)="stratChat()">Launch</button>
+    </div>
   </div>
+  
+  <!--<div class="col-lg-6 col-md-6">
+    <div class="flex">
+      <div class="main-container">
+        <div class="webchat-container" #botWindow></div>
+      </div>
+    </div>
+  </div>-->
 </div>
+
